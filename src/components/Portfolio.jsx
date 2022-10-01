@@ -11,31 +11,37 @@ const Portfolio = () => {
       id: 1,
       src: MU,
       href: "https://github.com/dqk0902/FinalProject",
+      link: "A final project from school about MU footbal club which is built by HTML, CSS and Javascript.",
     },
     {
       id: 2,
       src: Todo,
       href: "https://github.com/dqk0902/TodoApp",
+      link: "A simple TodoList built with ReactJs allowed user to add and delete things by clicking button.",
     },
     {
       id: 3,
       src: shoppingcart,
       href: "https://github.com/dqk0902/Shopping-Cart",
+      link: "Building frontend ShoppingCart website using ReactJs, CSS, Material UI library.",
     },
     {
       id: 4,
       src: weather_vue,
       href: "https://github.com/dqk0902/Weatherapp_Vue.js",
+      link: "Weatherapp built with VueJs and handeling OpenWeatherApp API",
     },
     {
       id: 5,
       src: user_info,
       href: "https://github.com/dqk0902/ReactAssignment",
+      link: "Simple User-info app built with ReactJs, Material UI library.",
     },
     {
       id: 6,
       src: weather_react,
       href: "https://github.com/dqk0902/Weather-app-React",
+      link: "Basic Weatherapp built with ReactJs and AccuWeather APIs.",
     },
   ];
   return (
@@ -52,13 +58,16 @@ const Portfolio = () => {
         </div>
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
-          {portfolios.map(({ id, src, href }) => (
+          {portfolios.map(({ id, src, href, link }) => (
             <div key={id} className="shadow-md shadow-gray-600 rounded-lg">
               <img
                 src={src}
                 alt=""
                 className="rounded-md duration-200 hover:scale-105"
               />
+              <div className="flex items-center justify-center px-6 py-3 ">
+                {link}
+              </div>
               <div className="flex items-center justify-center">
                 <a
                   href={href}
